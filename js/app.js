@@ -1,6 +1,7 @@
 ﻿var app = angular.module("appCalender", [
     'ngRoute',
-    'register']);
+    'register',
+    'home']);
 
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
@@ -10,7 +11,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     }).
     when('/index', {
         templateUrl: 'views/index.html',
-        controller: 'indexController'
+        controller: 'homeController'
     }).
     otherwise({
         redirectTo: '/index'

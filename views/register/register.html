@@ -1,17 +1,21 @@
 ﻿
 <h3 class="text-center">Welcome to the new app</h3>
 <div class="row">
-	<form>
-		<div class="form-group col-xs-12">
-			<input type="text" placeholder="user name" class="form-control" />
-		</div>
+	<form id="registerForm" name="registerForm" ng-submit="registerFormSubmit(this)">
+		<div class="col-xs-12">
+			<div class="form-group">
+				<input type="text" placeholder="user name" class="form-control input-lg" ng-model="registerForm.userName"/>
+			</div>
 
-		<div class="form-group col-xs-12">
-			<input type="password" placeholder="password" class="form-control" />
-		</div>
+			<div class="form-group">
+				<input type="password" placeholder="password" class="form-control input-lg" ng-model="registerForm.password"/>
+			</div>
 
-		<div class="form-group col-xs-12">
-			<input type="password" placeholder="confirm password" class=" form-control" />
+			<div class="form-group">
+				<input type="password" placeholder="confirm password" class=" form-control input-lg" />
+			</div>
+
+			<button type="submit" class="btn btn-lg btn-default btn-block">submit</button>
 		</div>
 	</form>
 </div>
